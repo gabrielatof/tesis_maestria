@@ -23,6 +23,7 @@ ggplot(exchanged_plot,
   geom_alluvium(aes(fill = compartment_producer), width = 0.2) +
   geom_stratum(width = 0.2, fill = "gray80", color = "black") +
   geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+  scale_fill_brewer(type = "qual", palette = "Dark2") +
   
   scale_x_discrete(limits = c("Producer", "Metabolite", "Consumer"),
                    expand = c(.1, .1)) +
